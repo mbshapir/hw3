@@ -87,7 +87,21 @@ int main(int argc, char* argv[])
 
     // Test out your linked list code
 
+    // Node* smaller;
+    // Node* larger;
+    // llpivot(head, smaller, larger, 10);
+    // cout << "larger: ";
+    // print(larger);
+    // cout << endl << "smaller: ";
+    // print(smaller);
 
+		struct isEven {
+			bool operator()(int x) { return x % 2 == 0; } };
+
+		Node* temp = llfilter(head, isEven());
+
+		cout << "Updated list: ";
+    print(temp);
 
     
     return 0;
